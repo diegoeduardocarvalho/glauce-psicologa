@@ -431,6 +431,11 @@ h6 {
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Whats Button
+--------------------------------------------------------------*/
+
 /* Pulse Animation */
 @keyframes pulse {
     0% {
@@ -597,9 +602,9 @@ section,
     z-index: 3;
 }
 
-.home h2 {
+.home h1 {
     margin: 0;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 700;
 }
 
@@ -1033,6 +1038,10 @@ section,
     left: calc(50% - 20px);
 }
 
+.testimonials .testimonial-item i {
+    color: var(--accent-color);
+}
+
 .testimonials .swiper-wrapper {
     height: auto;
 }
@@ -1100,7 +1109,7 @@ section,
     font-size: 14px;
 }
 
-.contact .info-item:hover i {
+.contact .info-item i {
     background: var(--accent-color);
     color: var(--contrast-color);
 }
@@ -1354,4 +1363,10 @@ section,
     display: block;
     margin: 0 auto;
     object-fit: cover;
+}
+
+.sitename {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 24px;
 }
