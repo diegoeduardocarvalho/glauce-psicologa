@@ -1101,3 +1101,10 @@ section,
 
     --bs-gradient: none;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    #home img {
+        content: url("../img/glau-bg-mobile.png");
+    }
+}
