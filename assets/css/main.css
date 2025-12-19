@@ -18,48 +18,47 @@
     --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-    --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-    --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-    --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-    --button-color: #1714ddff; /* Primary button color */
-    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-    --whats-color: #25d366; /* WhatsApp button color */
+    --background-color: #ffffff; /* Fundo geral */
+    --default-color: #9b8c82; /* Texto padrão (AA OK) */
+    --heading-color: #9b8c82; /* Títulos */
+    --accent-color: #6a5c54;
+    --accent-color-dark: #4f3f2e;
+    --button-color: #8a7d75ff; /* Botões primários */
+    --surface-color: #d1cbc5; /* Cards, boxes */
+    --contrast-color: #ffffff; /* Texto sobre fundos escuros */
+    --whats-color: #25d366; /* Mantido */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-    --nav-color: #a8a9b4; /* The default color of the main navmenu links */
-    --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-    --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-    --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-    --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-    --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+    --nav-color: #c2b8b0; /* Links padrão */
+    --nav-hover-color: #ffffff; /* Hover / ativo */
+    --nav-mobile-background-color: #9b8c82;
+    --nav-dropdown-background-color: #9b8c82;
+    --nav-dropdown-color: #dadadd;
+    --nav-dropdown-hover-color: #ffffff;
 }
-
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-    --background-color: #f4fafd;
+    --background-color: #dadadd;
     --surface-color: #ffffff;
 }
 
 .dark-background {
-    --background-color: #040b14;
+    --background-color: #9b8c82;
     --default-color: #ffffff;
     --heading-color: #ffffff;
-    --surface-color: #151f2b;
+    --surface-color: #b7a99d;
     --contrast-color: #ffffff;
 }
 
 .action-background {
-    --background-color: #149ddd;
+    --background-color: #b7a99d;
     --default-color: #ffffff;
     --heading-color: #ffffff;
-    --surface-color: #4faedaff;
+    --surface-color: #c2b8b0;
     --contrast-color: #ffffff;
 }
 
@@ -96,58 +95,6 @@ h5,
 h6 {
     color: var(--heading-color);
     font-family: var(--heading-font);
-}
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-    display: none;
-    background: #df1529;
-    color: #ffffff;
-    text-align: left;
-    padding: 15px;
-    margin-bottom: 24px;
-    font-weight: 600;
-}
-
-.php-email-form .sent-message {
-    display: none;
-    color: #ffffff;
-    background: #059652;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 24px;
-    font-weight: 600;
-}
-
-.php-email-form .loading {
-    display: none;
-    background: var(--surface-color);
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid var(--accent-color);
-    border-top-color: var(--surface-color);
-    animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 /*--------------------------------------------------------------
@@ -322,10 +269,8 @@ h6 {
     color: var(--nav-hover-color);
 }
 
-.navmenu a:hover .navicon,
-.navmenu .active .navicon,
-.navmenu .active:focus .navicon {
-    color: var(--accent-color);
+.navmenu a .navicon {
+    color: currentColor;
 }
 
 .navmenu .active .toggle-dropdown,
@@ -709,43 +654,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
-.skills .progress {
-    height: 60px;
-    display: block;
-    background: none;
-    border-radius: 0;
-}
-
-.skills .progress .skill {
-    color: var(--heading-color);
-    padding: 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: var(--heading-font);
-}
-
-.skills .progress .skill .val {
-    float: right;
-    font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-    background: color-mix(in srgb, var(--default-color), transparent 90%);
-    height: 10px;
-}
-
-.skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: 0.9s;
-    background-color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
 .resume .resume-title {
@@ -794,119 +702,6 @@ section,
 
 .resume .resume-item:last-child {
     padding-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
-.portfolio .portfolio-filters {
-    padding: 0;
-    margin: 0 auto 20px auto;
-    list-style: none;
-    text-align: center;
-}
-
-.portfolio .portfolio-filters li {
-    cursor: pointer;
-    display: inline-block;
-    padding: 0;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0 10px;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    transition: all 0.3s ease-in-out;
-}
-
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-    color: var(--accent-color);
-}
-
-.portfolio .portfolio-filters li:first-child {
-    margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-    margin-right: 0;
-}
-
-@media (max-width: 575px) {
-    .portfolio .portfolio-filters li {
-        font-size: 14px;
-        margin: 0 5px;
-    }
-}
-
-.portfolio .portfolio-content {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio .portfolio-content img {
-    transition: 0.3s;
-}
-
-.portfolio .portfolio-content .portfolio-info {
-    opacity: 0;
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-    transition: all ease-in-out 0.3s;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-}
-
-.portfolio .portfolio-content .portfolio-info h4 {
-    font-size: 14px;
-    padding: 5px 10px;
-    font-weight: 400;
-    color: #ffffff;
-    display: inline-block;
-    background-color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info p {
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    display: inline-block;
-    left: 0;
-    right: 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
-    position: absolute;
-    left: calc(50% - 40px);
-    font-size: 26px;
-    top: calc(50% - 14px);
-    color: #fff;
-    transition: 0.3s;
-    line-height: 1.2;
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-    color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info .details-link {
-    left: 50%;
-    font-size: 34px;
-    line-height: 0;
-}
-
-.portfolio .portfolio-content:hover .portfolio-info {
-    opacity: 1;
-}
-
-.portfolio .portfolio-content:hover img {
-    transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
@@ -1127,104 +922,6 @@ section,
     }
 }
 
-.contact .php-email-form input[type="text"],
-.contact .php-email-form input[type="email"],
-.contact .php-email-form textarea {
-    font-size: 14px;
-    padding: 10px 15px;
-    box-shadow: none;
-    border-radius: 0;
-    color: var(--default-color);
-    background-color: var(--surface-color);
-    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type="text"]:focus,
-.contact .php-email-form input[type="email"]:focus,
-.contact .php-email-form textarea:focus {
-    border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type="text"]::placeholder,
-.contact .php-email-form input[type="email"]::placeholder,
-.contact .php-email-form textarea::placeholder {
-    color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type="submit"] {
-    color: var(--contrast-color);
-    background: var(--accent-color);
-    border: 0;
-    padding: 10px 30px;
-    transition: 0.4s;
-    border-radius: 50px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details Section
---------------------------------------------------------------*/
-.portfolio-details .portfolio-details-slider img {
-    width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-    margin-top: 20px;
-    position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-    opacity: 1;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: var(--accent-color);
-}
-
-.portfolio-details .portfolio-info {
-    padding: 30px;
-    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-details .portfolio-info h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-}
-
-.portfolio-details .portfolio-info ul {
-    list-style: none;
-    padding: 0;
-    font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-    margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-    padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-    padding: 0;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
@@ -1297,10 +994,10 @@ section,
 .section-call {
     text-align: center;
     padding: 80px 20px;
-    background: radial-gradient(circle at top left, var(--accent-color), transparent 65%),
-        radial-gradient(circle at top right, var(--accent-color), transparent 65%),
-        radial-gradient(circle at bottom left, var(--accent-color), transparent 65%),
-        radial-gradient(circle at bottom right, var(--accent-color), transparent 65%), #fff;
+    background: radial-gradient(circle at top left, var(--accent-color), transparent 60%),
+        radial-gradient(circle at top right, var(--accent-color), transparent 60%),
+        radial-gradient(circle at bottom left, var(--accent-color), transparent 60%),
+        radial-gradient(circle at bottom right, var(--accent-color), transparent 60%), #fff;
 }
 
 .section-title-call {
@@ -1340,20 +1037,32 @@ section,
     font-size: 18px;
     font-weight: 700;
     border-radius: 50px;
-    box-shadow: 0 4px 24px rgba(20, 157, 221, 0.15);
+
+    /* Shadow baseada no tom do botão */
+    box-shadow: 0 4px 24px color-mix(in srgb, var(--button-color), transparent 80%);
+
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
     display: inline-block;
 }
+
 .btn-cta:hover,
 .btn-cta:focus {
-    background: color-mix(in srgb, var(--button-color), transparent 20%);
+    background: color-mix(in srgb, var(--button-color), transparent 30%);
+
     color: var(--contrast-color);
-    box-shadow: 0 6px 32px rgba(20, 157, 221, 0.25);
+
+    box-shadow: 0 6px 32px color-mix(in srgb, var(--button-color), transparent 70%);
+
     text-decoration: none;
 }
 
 .p-decoration {
-    color: #149ddd !important;
+    color: var(--accent-color) !important;
+}
+
+.p-decoration-dark {
+    color: var(--accent-color-dark) !important;
+    font-weight: 900;
 }
 
 .size-qrcode-maps {
@@ -1369,4 +1078,26 @@ section,
     color: var(--accent-color);
     font-weight: 700;
     font-size: 24px;
+}
+
+.btn-outline {
+    --bs-btn-color: var(--button-color);
+    --bs-btn-border-color: var(--button-color);
+
+    --bs-btn-hover-color: var(--contrast-color);
+    --bs-btn-hover-bg: var(--button-color);
+    --bs-btn-hover-border-color: var(--button-color);
+
+    --bs-btn-focus-shadow-rgb: 155, 140, 130; /* #9B8C82 em RGB */
+
+    --bs-btn-active-color: var(--contrast-color);
+    --bs-btn-active-bg: var(--button-color);
+    --bs-btn-active-border-color: var(--button-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+    --bs-btn-disabled-color: #c2b8b0;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #c2b8b0;
+
+    --bs-gradient: none;
 }
