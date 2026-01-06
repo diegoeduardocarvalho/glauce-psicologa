@@ -1108,3 +1108,9 @@ section,
         content: url("../img/glau-bg-mobile.png");
     }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #home img {
+        content: url("../img/glau-bg-tablet.png");
+    }
+}
